@@ -1,0 +1,8 @@
+---
+- hosts: all
+  become: yes
+  tasks: 
+  - name: I want to install apache server on redhat os
+    yum:
+      name: apache2
+      state: present
