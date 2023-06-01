@@ -1,0 +1,18 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: I want to uninstall tree on redhat os
+    yum: 
+      name: tree
+      state: absent
+
+  - name: I want to uninstall wget on redhat os
+    yum: 
+      name: wget
+      state: absent
+
+  - name: I want to uninstall wget on redhat os
+    yum: 
+      name: wget
+      state: absent
