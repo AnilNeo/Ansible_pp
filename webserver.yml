@@ -6,3 +6,18 @@
     yum:
       name: apache2
       state: present
+
+  - name: I wanna install the webserver on ubuntu
+    apt:
+      name: apache2
+      state: present
+
+  - name: I want to start the webserver on redhat
+    service: 
+      name: apache2
+      state: started
+
+  - name: I want to start the webserver on ubuntu
+    service: 
+      name: apache2
+      state: started
