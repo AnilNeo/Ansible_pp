@@ -1,0 +1,9 @@
+---
+- hosts: 172.31.39.243
+become: yes
+tasks: 
+  - name: I wanna install wget on ansible ubuntu node
+    apt:
+    - name: wget
+      state: present
+  when: ansible_os_family=="Debian"
