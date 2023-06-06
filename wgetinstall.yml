@@ -1,7 +1,7 @@
 ---
-- hosts: 172.31.39.243
-become: yes
-tasks: 
+- hosts: all
+  become: yes
+  tasks: 
   - name: I wanna install wget on ansible ubuntu node
     apt:
     - name: wget
