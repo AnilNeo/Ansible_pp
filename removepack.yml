@@ -1,15 +1,17 @@
 ---
-hosts: all
-become: yes
-tasks:
-- name: I wanna remove wget package on yum
-  yum:
-    name: wget
-    state: absent
-when: ansible_os_family=="RedHat"
+- hosts: all
+  become:yes
+  gather_facts:yes
+  tasks:
+  - name: I wanna remove wget package on yum
+    yum:
+      name: wget
+      state: absent
+      when: ansible_os_family=="RedHat"
 
-- name: I wanna install wget package on apt module
-  apt:
-    name: wget
-    state: present
-when: ansible_os_family=="Debian"
+  - name: I wanna install wget package on apt module
+      apt:
+      name: wget
+      state: present
+      when: ansible_os_family=="Debian"
+...
