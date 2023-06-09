@@ -6,10 +6,10 @@
   - name: I want to remove wget
     yum:
       name: wget
-      state: absent
+      state: present
       when: ansible_is_family=="RedHat"
   - name: I want to remove wget
     apt:
       name: wget
-      state: absent
+      state: present
       when: ansible_is_family=="Debian"
