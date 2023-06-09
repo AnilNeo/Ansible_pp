@@ -1,7 +1,7 @@
 ---
 - hosts: all
-  become:yes
-  gather_facts:yes
+  become: yes
+  gather_facts: yes
   tasks:
   - name: I wanna remove wget package on yum
     yum:
