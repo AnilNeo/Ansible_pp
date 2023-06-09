@@ -4,12 +4,12 @@
   gather_facts: yes
   tasks:
   - name: I want to remove wget
-      yum:
-      name: wget
-      state: absent
-      when: ansible_is_family == "RedHat"
+      service:
+        name: wget
+        state: absent
+        when: ansible_is_family == "RedHat"
   - name: I want to remove wget
-      apt:
-      name: wget
-      state: absent
-      when: ansible_is_family == "Debian"
+      service:
+        name: wget
+        state: absent
+        when: ansible_is_family == "Debian"
